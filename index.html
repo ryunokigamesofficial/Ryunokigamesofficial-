@@ -40,13 +40,36 @@
       font-size: 0.9rem;
       color: #94a3b8;
     }
+    #apkLink {
+      display: none;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
   <h1>Ryunoki Games 🎮</h1>
+
+  <!-- Social links -->
   <a href="https://www.youtube.com/@ryunokigames" class="btn" target="_blank">🔴 Subscribe on YouTube</a>
   <a href="https://t.me/ryunokigamesofficial" class="btn" target="_blank">📩 Join Telegram</a>
   <a href="https://www.instagram.com/ryunokigames" class="btn" target="_blank">📷 Follow on Instagram</a>
+
+  <!-- Unlock section -->
+  <h2 style="margin-top:40px;">Unlock APK Download 🔒</h2>
+  <p>Subscribe, Follow & Join Telegram to unlock the APK!</p>
+  <button onclick="unlock()" id="unlockBtn" class="btn">✅ I Subscribed & Followed</button>
+
+  <div id="apkLink">
+    <a href="your-apk-link-here.apk" class="btn" target="_blank">📥 Download APK</a>
+  </div>
+
   <div class="footer">© 2025 Ryunoki Games</div>
+
+  <script>
+    function unlock() {
+      document.getElementById("apkLink").style.display = "block";
+      document.getElementById("unlockBtn").style.display = "none";
+    }
+  </script>
 </body>
 </html>
