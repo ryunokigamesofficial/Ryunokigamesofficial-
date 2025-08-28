@@ -44,6 +44,12 @@
       display: none;
       margin-top: 20px;
     }
+    /* Locked button style */
+    .locked {
+      background: #475569;
+      color: #cbd5e1;
+      cursor: not-allowed;
+    }
   </style>
 </head>
 <body>
@@ -60,15 +66,21 @@
   <button onclick="unlock()" id="unlockBtn" class="btn">✅ I Subscribed & Followed</button>
 
   <div id="apkLink">
-    <a href="your-apk-link-here.apk" class="btn" target="_blank">📥 Download APK</a>
+    <a href="https://www.mediafire.com/file/25lrdd3wdzofg8o/ASTUTE+VIP+PROXY+FF+MAX+-+RYUNOKI+GAMES.apk/file?dkey=7q0w2yehu9k&r=28" 
+       class="btn locked" id="downloadBtn" target="_blank">🔒 Locked</a>
   </div>
 
   <div class="footer">© 2025 Ryunoki Games</div>
 
   <script>
     function unlock() {
-      document.getElementById("apkLink").style.display = "block";
+      let link = document.getElementById("apkLink");
+      let btn = document.getElementById("downloadBtn");
+      link.style.display = "block";
       document.getElementById("unlockBtn").style.display = "none";
+      // change button style from locked to normal
+      btn.classList.remove("locked");
+      btn.innerHTML = "📥 Download APK";
     }
   </script>
 </body>
